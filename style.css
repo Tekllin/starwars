@@ -1,0 +1,42 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#background
+{
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    margin: 0;
+}
+#vod
+{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#fond
+{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    transition: 0.5s;
+}
+
+
+
