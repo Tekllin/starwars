@@ -2,27 +2,31 @@ const video = document.getElementById('video');
 const deathstar = document.getElementById('fond');
 const videoDiv = document.getElementById('vod');
 
-let count = 0;
+let count = false;
 function play()
 {
 
     
-    let vod =`<video src="video/Vidéo sans titre ‐ Réalisée avec Clipchamp (1).mp4" id="video" autoplay muted></video>`;
+//    let vod =`<video src="video/Vidéo sans titre ‐ Réalisée avec Clipchamp (1).mp4" id="video" autoplay muted></video>`;
 
-    if(count < 1)
+    if(!count)
     {
-        videoDiv.insertAdjacentHTML("afterbegin", vod);
-        count = count + 1;
+        const video = document.createElement("video");
+        videoDiv.appendChild(video);
+
+        video.src = "video/Vidéo sans titre ‐ Réalisée avec Clipchamp (1).mp4";
+        video.autoplay = true;
+
+        count = true
         console.log(count);
-        return count;
+
+        video.addEventListener('ended', () =>
+        {
+            video.remove()
+        });
     }
     else
     {
         console.log("No exec");
     }
-};
-
-video.addEventListener('ended', playend); 
-{
-    let vod = 0;
 };
